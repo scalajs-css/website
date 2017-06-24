@@ -1,0 +1,36 @@
+{
+  "name": "scalajs-css",
+  "version": "0.1.0",
+  "description": "scalajs css website",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --progress",
+    "build": "webpack --config webpack.config.prod.js",
+    "relay": "relay-compiler --src ./assets/queries/ --schema ./data/schema.graphql --outputDir ./queries"
+  },
+  "devDependencies": {
+    "babel-cli": "^7.0.0-alpha.9",
+    "babel-loader": "^7.0.0",
+    "compression-webpack-plugin": "^0.4.0",
+    "css-loader": "^0.28.1",
+    "file-loader": "^0.11.1",
+    "image-webpack-loader": "^3.3.0",
+    "lodash": "^4.17.4",
+    "style-loader": "^0.17.0",
+    "sw-precache": "^5.1.1",
+    "sw-precache-webpack-plugin": "^0.11.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5",
+    "workbox-webpack-plugin": "^1.0.1"
+  },
+  "dependencies": {
+    "history": "^4.6.1",
+    "path-to-regexp": "^1.7.0",
+    "react": "15.5.4",
+    "react-dom": "15.5.4"
+  }
+}
