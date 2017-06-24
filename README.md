@@ -1,3 +1,2 @@
-# Back to Seed
+# ScalajS CSS Website
 
-backtoseed.org
