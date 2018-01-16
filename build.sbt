@@ -2,15 +2,10 @@ enablePlugins(ScalaJSPlugin)
 
 name := "scalajs-css-website"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.4"
 
 libraryDependencies ++= Seq(
-  "scalajs-react-interface" %%% "core" % "2017.6.0-SNAPSHOT",
-  "scalajs-react-interface" %%% "web" % "2017.6.0-SNAPSHOT",
-  "scalajs-react-interface" %%% "vdom" % "2017.6.0-SNAPSHOT",
-  "scalajs-react-interface" %%% "web-router" % "2017.6.0-SNAPSHOT",
-  "scalajs-css" %%% "core" % "2017.6.24-RC",
-  "scalajs-react-interface" %%% "universal" % "2017.6.0-SNAPSHOT"
+  "scalajs-react-interface" %%% "web-bundle" % "2018.1.0-SNAPSHOT"
 )
 
 scalacOptions ++= Seq(
@@ -20,11 +15,11 @@ scalacOptions ++= Seq(
   "-language:postfixOps",
   "-language:implicitConversions",
   "-language:higherKinds",
-  "-language:existentials",
-  "-P:scalajs:sjsDefinedByDefault" // TODO remove this when we upgrade to scala.js 1.0
+  "-language:existentials"
 )
 
-scalaJSModuleKind := ModuleKind.CommonJSModule
+scalaJSLinkerConfig ~= (_.withModuleKind(ModuleKind.CommonJSModule).withSourceMap(false))
+
 
 scalaJSUseMainModuleInitializer := true
 

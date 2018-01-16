@@ -23,7 +23,7 @@ echo "no comment specified to deploy, using default : $comment"
 fi
 
 
-ghPagesPath="/Users/chandrasekharkode/Desktop/Kode/Programming/scalaprojects/scalajs-css/scalajs-css.github.io"
+ghPagesPath="/Users/chandu0101/Desktop/kode/programming/scalaprojects/css/scalajs-css.github.io"
 
 projectPath=${ghPagesPath}
 

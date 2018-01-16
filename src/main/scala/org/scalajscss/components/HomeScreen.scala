@@ -3,11 +3,9 @@ package org.scalajscss.components
 import sri.web.router.RouterScreenComponentNoPSLS
 import sri.web.vdom.tags._
 
-import scala.scalajs.js.annotation.ScalaJSDefined
 import scala.scalajs.js.{UndefOr => U}
 import scalajscss.{CSSStyleSheet, CSSStyleSheetRegistry}
 
-@ScalaJSDefined
 class HomeScreen extends RouterScreenComponentNoPSLS {
   import HomeScreen._
 
@@ -38,7 +36,10 @@ class HomeScreen extends RouterScreenComponentNoPSLS {
             target = "_blank")("Discuss"),
           a(className = styles.linkButton,
             href = "https://github.com/scalajs-css",
-            target = "_blank")("Github")
+            target = "_blank")("Github"),
+          a(className = styles.linkButton,
+            href = "https://www.patreon.com/chandu0101",
+            target = "_blank")("Sponsor")
         )
       )
     )
